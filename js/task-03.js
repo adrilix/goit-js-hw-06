@@ -12,3 +12,19 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+
+// Напиши скрипт для створення галереї зображень на підставі масиву даних. HTML містить список ul.gallery.
+const newUl = document.querySelector(".gallery");
+newUl.style.display = "flex";
+
+const allImages = images.map(image => {
+  const newLi = `<li>
+    <img src = ${image.url} alt = ${image.alt} width=630 height=375>
+  </li>`;
+  return newLi
+})
+
+newUl.insertAdjacentHTML("afterbegin", allImages.join(''));
+
+console.log(allImages);
