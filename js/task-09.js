@@ -7,8 +7,9 @@ const myBody = document.body;
 myButton.addEventListener('click', onEdit);
 
 function onEdit (event) {
-      myBody.style.backgroundColor = getRandomHexColor();
-      mySpan.textContent = getRandomHexColor();
+const newColor = getRandomHexColor();
+      myBody.style.backgroundColor = newColor;
+      mySpan.textContent = newColor;
 }
 
 function getRandomHexColor() {
